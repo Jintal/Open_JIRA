@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/************************ Toolbox **************************/
+
+.toolbox-cont {
+    height: 5rem;
+    background-color: #4b4b4b;
+    display: flex;
+    align-items: center;
+}
+
+.toolbox-cont > * {
+    margin-left: 4rem;
+    border-radius: 0.2rem;
+
+}
+
+/************************ Toolbox Priority **************************/
+
+.toolbox-priority-cont {
+    height: 3.5rem;
+    width: 16rem;
+    background-color: #3d3d3d;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.color {
+    height: 1.5rem;
+    width:2.5rem;
+    background-color: lightsalmon;
+    border-radius: 0.2rem;
+}
+
+.color:hover {
+    cursor: pointer;
+}
+
+.lightpink {
+    background-color: lightpink;
+}
+
+.lightblue {
+    background-color: lightblue;
+}
+
+.lightgreen {
+    background-color: lightgreen;
+}
+
+.black {
+    background-color: black;
+}
+
+/************************ Action Buttons **************************/
+
+.action-btn-cont {
+    height: 3.5rem;
+    width: 8rem;
+    background-color: #3d3d3d;
+    display: flex;
+}
+
+.action-btn-cont > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 2rem;
+    color: #d1d8e0;
+}
+
+.action-btn-cont > *:hover{
+    color: #485460;
+    cursor: pointer;
+}
+
+/************************ Modal **************************/
+
+.modal-cont {
+    height: 50vh;
+    width: 45vw;
+    position: absolute;
+    top: calc((100vh - 50vh)/ 2);
+    left: calc((100vw - 45vw) / 2);
+    display: flex;
+}
+
+.textarea-cont {
+    height: 100%;
+    width: 75%;
+    background-color: #d2dae2;
+    padding: 2rem;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    resize: none;
+
+}
+
+.priority-colors-cont {
+    height: 100%;
+    width: 25%;
+    background-color: #504f4f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.priority-color {
+    height: 3rem;
+    width: 55%;
+    border-radius: 0.25rem;
+}
+
+.priority-color:hover {
+    cursor: pointer;
+}
+
+.selected-border {
+    border: 0.4rem solid #dd00c0;
+}
+
+/************************ Main Container and Ticket **************************/
+
+.main-cont {
+    padding: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.ticket-cont {
+    height: 14rem;
+    width: 18rem;
+    background-color: #f1f2f6;
+}
+
+.ticket-color {
+    height: 1.3rem;
+}
+
+.ticket-color:hover{
+    cursor: pointer;
+}
+
+.ticket-id {
+    height: 2.3rem;
+    padding: 0.5rem;
+}
+
+.ticket-lock {
+    height: 2rem;
+    font-size: 1.5rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ticket-lock>i:hover{
+    cursor: pointer;
+}
+
+.task-area {
+    height: calc(100% - 1.3rem - 2.3rem - 2rem);
+    outline: none;
+    padding: 0.5rem;
+}
+
+/**************************** Media Queries *********************************/
+
+@media screen and (max-width:768px ) and (min-width:426px){
+    .modal-cont {
+        width: 60vw;
+        left: calc((100vw - 60vw)/2);
+    }
+}
+
+@media screen and (max-width:425px) {
+    .modal-cont {
+        width: 75vw;
+        height: 40vh;
+        top: calc((100vh - 40vh)/2);
+        left: calc((100vw - 75vw)/2);
+        flex-direction: column;
+    }
+
+    .textarea-cont {
+        width: 100%;
+    }
+
+    .priority-colors-cont {
+        flex-direction: row;
+        width: 100%;
+        height: 25%;
+    }
+
+    .priority-color {
+        width: 17%;
+        height: 68%;
+    }
+
+    .toolbox-cont > * {
+        margin: 0 1rem;
+    }
+}
